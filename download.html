@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Download Wild Liker App - Get more likes, fans & views on TikTok">
+    <title>Download | Wild Liker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Theme Toggle - LEFT SIDE -->
+    <div class="theme-toggle-container">
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div>
+                <img src="https://files.catbox.moe/jktu83.png" alt="Wild Liker Logo" class="logo">
+            </div>
+            <div>
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+
+        <div class="download-main-card">
+            <i class="fab fa-android download-icon-large"></i>
+            <h1 class="download-main-title">Download Wild Liker App</h1>
+            <p class="download-description">
+                Get the official Wild Liker Android app and start gaining more likes, fans & views instantly!
+            </p>
+            
+            <a href="https://files.catbox.moe/4b6duf.apk" class="download-btn-large" download id="downloadBtn">
+                <i class="fas fa-download"></i> Download Now
+            </a>
+            
+            <p class="support-text"><i class="fas fa-check-circle"></i> Support Android 10 and above</p>
+            <p class="support-text" style="font-size: 0.7rem; color: #6a5a8a;">📦 File size: ~4.6 MB | Version: 2.0.1</p>
+        </div>
+
+        <div style="text-align: center; margin: 1rem 0;">
+            <button class="share-btn" onclick="shareWebsite()">
+                <i class="fas fa-share-alt"></i> Share This Page
+            </button>
+        </div>
+
+        <div class="version-info">
+            <span class="version-badge"><i class="fas fa-code-branch"></i> Latest Version</span>
+            <p style="margin-top: 0.5rem; color: #c9b3ff;">Version 2.0.1 • Updated March 2026</p>
+            <p style="font-size: 0.8rem; color: #8a7aaa;">✨ New features: Faster loading, Better performance, Bug fixes</p>
+        </div>
+
+        <!-- Social Section - WhatsApp Channel Only -->
+        <div class="social-section">
+            <h3 class="social-title"><i class="fab fa-whatsapp"></i> Connect With Us</h3>
+            <div class="social-links">
+                <a href="https://whatsapp.com/channel/0029VbChWbyKmCPYvkZZVK2i" class="social-link whatsapp-channel" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Join WhatsApp Channel
+                </a>
+            </div>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fas fa-bolt info-icon"></i>
+                <h3>Lightning Fast</h3>
+                <p>Get instant likes and views on your TikTok videos within seconds</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-shield-alt info-icon"></i>
+                <h3>100% Safe</h3>
+                <p>Your account is completely safe with our advanced security system</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-infinity info-icon"></i>
+                <h3>Unlimited Use</h3>
+                <p>No limits! Use the app as many times as you want completely free</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-chart-line info-icon"></i>
+                <h3>Grow Fast</h3>
+                <p>Increase your followers and engagement rate dramatically</p>
+            </div>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fas fa-download info-icon"></i>
+                <h3>1. Download APK</h3>
+                <p>Click the download button above to get the APK file</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-shield-virus info-icon"></i>
+                <h3>2. Allow Installation</h3>
+                <p>Go to Settings → Security → Enable "Unknown Sources"</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-play-circle info-icon"></i>
+                <h3>3. Install & Enjoy</h3>
+                <p>Open the APK file and click install. That's it!</p>
+            </div>
+        </div>
+
+        <div class="developer-section">
+            <span class="developer-text">
+                <i class="fas fa-code"></i> Developed By 
+                <span class="heart-animation">❤️</span> 
+                <strong style="font-size: 1.1rem;">Rush Dewon</strong>
+                <i class="fas fa-crown"></i>
+            </span>
+        </div>
+
+        <div class="footer">
+            <p style="color: #7a6a9a;">&copy; 2026 WildLiker | All Rights Reserved</p>
+            <hr>
+            <div class="footer-links">
+                <a href="/terms">Terms</a>
+                <a href="/privacy">Privacy</a>
+                <a href="/cookies">Cookies</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button - Direct Chat -->
+    <a href="https://wa.me/94743374006" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        function showToast(message, isError = false) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = message;
+            if (isError) toast.style.borderLeftColor = '#ff4444';
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const btn = document.getElementById('themeToggle');
+            if (document.body.classList.contains('light-mode')) {
+                btn.innerHTML = '<i class="fas fa-sun"></i>';
+                localStorage.setItem('theme', 'light');
+                showToast('🌞 Light mode activated');
+            } else {
+                btn.innerHTML = '<i class="fas fa-moon"></i>';
+                localStorage.setItem('theme', 'dark');
+                showToast('🌙 Dark mode activated');
+            }
+        }
+
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+            document.getElementById('themeToggle').innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        function shareWebsite() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Download Wild Liker',
+                    text: 'Get free TikTok likes, fans & views!',
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                showToast('✅ Link copied to clipboard!');
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('backToTop');
+            btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+
+        document.getElementById('downloadBtn')?.addEventListener('click', function() {
+            let count = parseInt(localStorage.getItem('downloadCount') || '15247');
+            count++;
+            localStorage.setItem('downloadCount', count);
+            showToast('📱 Download started!');
+        });
+    </script>
+
+</body>
+</html>

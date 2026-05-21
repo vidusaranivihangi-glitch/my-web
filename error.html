@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Access Denied - Wild Liker">
+    <title>Access Denied | Wild Liker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div>
+                <img src="https://files.catbox.moe/jktu83.png" alt="Logo" class="logo">
+            </div>
+            <div>
+                <a href="download.html" class="nav-link"><i class="fas fa-download"></i> Download App</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Error Alert -->
+        <div class="alert-error">
+            <span class="badge-error">Error</span>
+            <span style="color: #c9b3ff;">Your Access Has Been Marked As Unauthorized.</span>
+        </div>
+
+        <h1 class="main-title">Wild Fire Auto Liker & Auto Views</h1>
+        <p class="subtitle">A web application made for people who want to gain fame by increase likes, fans & views.</p>
+
+        <div class="feature-icons">
+            <span><i class="fa fa-heartbeat"></i> HEARTS</span>
+            <span><i class="fa fa-play-circle"></i> VIEWS</span>
+            <span><i class="fa fa-share-square"></i> SHARES</span>
+        </div>
+
+        <div class="form-section">
+            <div class="form-label">Enter Username</div>
+            <div class="form-input-area">
+                <form action="/verify" method="POST">
+                    <input name="MihscnU9F-3ENLU0n-WSiUlWWRhliPQuYXJ7LcNKeLlbJSXNcUKoo4yA8PWNrRd6Oe" id="MihscnU9F-3ENLU0n-WSiUlWWRhliPQuYXJ7LcNKeLlbJSXNcUKoo4yA8PWNrRd6Oe" type="text" class="p-3 border-gray-400 outline-gray-600 border w-full font-medium rounded-lg text-sm" placeholder="Profile Username / Link" required/>
+                    <input type="text" id="eb2wOiu8KfTAc4ba6OFt" name="eb2wOiu8KfTAc4ba6OFt" hidden>
+                    <input type="text" name="arithmetic" value="65bc" hidden>
+                    <button id="continue" type="submit" class="btn-continue">Continue</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="terms-text">
+            Before start using Wild Liker, make sure that you have read & agreed with our 
+            <a href="/terms">Terms and Conditions</a> & <a href="/privacy">Privacy Policies</a>.
+        </div>
+
+        <div class="download-card">
+            <i class="fab fa-android download-icon"></i>
+            <div class="download-title">Available on Android</div>
+            <p style="color: #8a7aaa;">Get the WildLiker Android app — now available for download!</p>
+            <a href="download.html" class="download-btn">
+                <i class="fab fa-google-play"></i> Download Android App
+            </a>
+            <p style="font-size: 0.7rem; color: #6a5a8a; margin-top: 1rem;">Support Android 10 and above</p>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3><i class="fas fa-heartbeat"></i> Instant Likes</h3>
+                <p>Get instant 100 likes on your tik tok videos & increase upto 10K.</p>
+            </div>
+            <div class="feature-item">
+                <h3><i class="fas fa-play-circle"></i> Instant Views</h3>
+                <p>Now increase views on your tik tok videos instantly for free.</p>
+            </div>
+            <div class="feature-item">
+                <h3><i class="fas fa-user"></i> Instant Fans</h3>
+                <p>Gain fame on tiktok by increasing fans on your account for free.</p>
+            </div>
+            <div class="feature-item">
+                <h3><i class="fas fa-certificate"></i> Trusted & Safe</h3>
+                <p>Wild Liker is made with love by professional developers.</p>
+            </div>
+        </div>
+
+        <div class="not-working">
+            <h4>NOT WORKING?</h4>
+            <p>Make sure your Profile is not in PRIVATE MODE</p>
+        </div>
+
+        <div class="developer-section">
+            <span class="developer-text">
+                <i class="fas fa-code"></i> Developed By 
+                <span class="heart-animation">❤️</span> 
+                <strong style="font-size: 1.1rem;">Rush Dewon</strong>
+                <i class="fas fa-crown"></i>
+            </span>
+        </div>
+
+        <div class="footer">
+            <p style="color: #7a6a9a;">&copy; 2026 WildLiker | All Rights Reserved</p>
+            <hr>
+            <div class="footer-links">
+                <a href="/terms">Terms</a>
+                <a href="/privacy">Privacy</a>
+                <a href="/cookies">Cookies</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script>
+        $('form').submit(function() {
+            if ($('#MihscnU9F-3ENLU0n-WSiUlWWRhliPQuYXJ7LcNKeLlbJSXNcUKoo4yA8PWNrRd6Oe').val().length != 0) {
+                $('#continue').html('<i class="fas fa-circle-notch fa-spin"></i>');
+                $('#continue').prop('disabled', true);
+            }
+        });
+    </script>
+</body>
+</html>

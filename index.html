@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Wild Liker - Get more likes, fans & views on TikTok">
+    <title>Wild Liker | Auto Liker & Views</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Spinner -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Theme Toggle - LEFT SIDE -->
+    <div class="theme-toggle-container">
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div>
+                <img src="https://files.catbox.moe/jktu83.png" alt="Logo" class="logo">
+            </div>
+            <div>
+                <a href="download.html" class="nav-link"><i class="fas fa-download"></i> Download App</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="alert-banner">
+            <span class="badge-new">New Version</span>
+            <span>Get <strong style="color:#c9b3ff">More Views</strong> with Our Android App</span>
+            <a href="download.html" class="alert-link"><i class="fas fa-external-link-alt"></i> Download Now</a>
+        </div>
+
+        <h1 class="main-title">Wild Fire Auto Liker & Auto Views</h1>
+        <p class="subtitle">A web application made for people who want to gain fame by increase likes, fans & views.</p>
+
+        <div class="feature-icons">
+            <span><i class="fa fa-heartbeat"></i> HEARTS</span>
+            <span><i class="fa fa-play-circle"></i> VIEWS</span>
+            <span><i class="fa fa-share-square"></i> SHARES</span>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-grid">
+            <div class="stats-card">
+                <div class="stats-number" id="downloadCount">15,247</div>
+                <div class="stats-label">Total Downloads</div>
+            </div>
+            <div class="stats-card">
+                <div class="stats-number" id="userCount">8,432</div>
+                <div class="stats-label">Active Users</div>
+            </div>
+            <div class="stats-card">
+                <div class="stats-number">4.8 ⭐</div>
+                <div class="stats-label">User Rating</div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-label">Enter Username</div>
+            <div class="form-input-area">
+                <form id="tiktokForm">
+                    <input type="text" id="username" placeholder="Profile Username / Link" required>
+                    <button type="submit" class="btn-continue">Continue</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="terms-text">
+            Before start using Wild Liker, make sure that you have read & agreed with our 
+            <a href="/terms">Terms and Conditions</a> & <a href="/privacy">Privacy Policies</a>.
+        </div>
+
+        <div class="download-card">
+            <i class="fab fa-android download-icon"></i>
+            <div class="download-title">Available on Android</div>
+            <p style="color: #8a7aaa;">Get the WildLiker Android app — now available for download!</p>
+            <a href="https://files.catbox.moe/4b6duf.apk" class="download-btn" download>
+                <i class="fab fa-google-play"></i> Download Android App
+            </a>
+            <p style="font-size: 0.7rem; color: #6a5a8a; margin-top: 1rem;">Support Android 10 and above</p>
+        </div>
+
+        <!-- Share Button -->
+        <div style="text-align: center; margin: 1rem 0;">
+            <button class="share-btn" onclick="shareWebsite()">
+                <i class="fas fa-share-alt"></i> Share Wild Liker
+            </button>
+        </div>
+
+        <!-- Social Section - WhatsApp Channel Only (Number Hidden) -->
+        <div class="social-section">
+            <h3 class="social-title"><i class="fab fa-whatsapp"></i> Connect With Us</h3>
+            <div class="social-links">
+                <a href="https://whatsapp.com/channel/0029VbChWbyKmCPYvkZZVK2i" class="social-link whatsapp-channel" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Join WhatsApp Channel
+                </a>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3><i class="fas fa-heartbeat"></i> Instant Likes</h3>
+                <p>Get instant 100 likes on your tik tok videos & increase upto 10K.</p>
+            </div>
+            <div class="feature-item">
+                <h3><i class="fas fa-play-circle"></i> Instant Views</h3>
+                <p>Now increase views on your tik tok videos instantly for free.</p>
+            </div>
+            <div class="feature-item">
+                <h3><i class="fas fa-user"></i> Instant Fans</h3>
+                <p>Gain fame on tiktok by increasing fans on your account for free.</p>
+            </div>
+            <div class="feature-item">
+                <h3><i class="fas fa-certificate"></i> Trusted & Safe</h3>
+                <p>Wild Liker is made with love by professional developers.</p>
+            </div>
+        </div>
+
+        <div class="not-working">
+            <h4>NOT WORKING?</h4>
+            <p>Make sure your Profile is not in PRIVATE MODE</p>
+        </div>
+
+        <div class="developer-section">
+            <span class="developer-text">
+                <i class="fas fa-code"></i> Developed By 
+                <span class="heart-animation">❤️</span> 
+                <strong style="font-size: 1.1rem;">Rush Dewon</strong>
+                <i class="fas fa-crown"></i>
+            </span>
+        </div>
+
+        <div class="footer">
+            <p style="color: #7a6a9a;">&copy; 2026 WildLiker | All Rights Reserved</p>
+            <hr>
+            <div class="footer-links">
+                <a href="/terms">Terms</a>
+                <a href="/privacy">Privacy</a>
+                <a href="/cookies">Cookies</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button - Direct Chat (Number Hidden) -->
+    <a href="https://wa.me/94743374006" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        function showToast(message, isError = false) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = message;
+            if (isError) toast.style.borderLeftColor = '#ff4444';
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        function showLoading() {
+            document.getElementById('loadingOverlay').style.display = 'block';
+        }
+
+        function hideLoading() {
+            document.getElementById('loadingOverlay').style.display = 'none';
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const btn = document.getElementById('themeToggle');
+            if (document.body.classList.contains('light-mode')) {
+                btn.innerHTML = '<i class="fas fa-sun"></i>';
+                localStorage.setItem('theme', 'light');
+                showToast('🌞 Light mode activated');
+            } else {
+                btn.innerHTML = '<i class="fas fa-moon"></i>';
+                localStorage.setItem('theme', 'dark');
+                showToast('🌙 Dark mode activated');
+            }
+        }
+
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+            document.getElementById('themeToggle').innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        function shareWebsite() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Wild Liker',
+                    text: 'Get free TikTok likes, fans & views!',
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                showToast('✅ Link copied to clipboard!');
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                btn.style.display = 'flex';
+            } else {
+                btn.style.display = 'none';
+            }
+        });
+
+        document.querySelectorAll('.download-btn, .download-btn-large').forEach(btn => {
+            btn.addEventListener('click', function() {
+                let count = parseInt(localStorage.getItem('downloadCount') || '15247');
+                count++;
+                localStorage.setItem('downloadCount', count);
+                document.getElementById('downloadCount').innerText = count.toLocaleString();
+                showToast('📱 Download started!');
+            });
+        });
+
+        if (localStorage.getItem('downloadCount')) {
+            document.getElementById('downloadCount').innerText = parseInt(localStorage.getItem('downloadCount')).toLocaleString();
+        }
+
+        document.getElementById('tiktokForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let username = document.getElementById('username').value;
+            
+            username = username.trim();
+            username = username.replace('@', '');
+            username = username.replace('https://www.tiktok.com/', '');
+            username = username.replace('https://tiktok.com/', '');
+            username = username.replace('tiktok.com/', '');
+            username = username.replace('/', '');
+            
+            if (username.length > 0) {
+                showLoading();
+                setTimeout(() => {
+                    window.location.href = 'https://www.tiktok.com/@' + encodeURIComponent(username);
+                    hideLoading();
+                }, 800);
+            } else {
+                showToast('❌ Please enter a valid username', true);
+            }
+        });
+    </script>
+
+</body>
+</html>

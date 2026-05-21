@@ -1,0 +1,854 @@
+/* ========================================
+   WILD LIKER - DARK THEME WITH PURPLE TEXT
+   UPDATED - Hidden Phone Number, Left Side Toggle
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a0f;
+    min-height: 100vh;
+    color: #c9b3ff;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Light Mode */
+body.light-mode {
+    background: #f5f5f5;
+    color: #333;
+}
+
+body.light-mode .navbar {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom-color: #9d6bff;
+}
+
+body.light-mode .nav-link,
+body.light-mode .text-gray-700 {
+    color: #333;
+}
+
+body.light-mode .download-card,
+body.light-mode .download-main-card,
+body.light-mode .feature-item,
+body.light-mode .info-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #9d6bff;
+}
+
+body.light-mode .form-input-area input {
+    background: white;
+    color: #333;
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(8, 8, 15, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(157, 107, 255, 0.3);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    height: 45px;
+    width: auto;
+}
+
+.nav-link {
+    color: #c9b3ff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(157, 107, 255, 0.2);
+    color: #e0b3ff;
+}
+
+/* Theme Toggle Button - LEFT SIDE */
+.theme-toggle-container {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+
+.theme-toggle {
+    background: rgba(157, 107, 255, 0.2);
+    border: 1px solid rgba(157, 107, 255, 0.3);
+    color: #c9b3ff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+    background: rgba(157, 107, 255, 0.4);
+    transform: rotate(15deg);
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Alert Error */
+.alert-error {
+    background: linear-gradient(135deg, #1a0a1a, #1a0a2a);
+    border-left: 4px solid #ff4444;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.badge-error {
+    background: #ff4444;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Alert Banner */
+.alert-banner {
+    background: linear-gradient(135deg, #1a0a2a, #1a1a3a);
+    border-left: 4px solid #9d6bff;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.badge-new {
+    background: #9d6bff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+}
+
+.alert-link {
+    background: #9d6bff;
+    padding: 0.4rem 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.alert-link:hover {
+    background: #b580ff;
+    transform: scale(1.02);
+}
+
+/* Main Title */
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff, #c9b3ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #a090c0;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.feature-icons {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0;
+    color: #c9b3ff;
+}
+
+.feature-icons i {
+    margin-right: 0.5rem;
+}
+
+/* Stats Cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.stats-card {
+    background: rgba(30, 30, 50, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(157, 107, 255, 0.2);
+    transition: all 0.3s;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    border-color: #9d6bff;
+}
+
+.stats-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #9d6bff;
+}
+
+.stats-label {
+    color: #a0a0b0;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+/* Form Section */
+.form-section {
+    margin: 2rem 0;
+}
+
+.form-label {
+    background: #1a1a2a;
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px 12px 0 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #c9b3ff;
+}
+
+.form-input-area {
+    background: #0f0f1a;
+    padding: 1.2rem;
+    border-radius: 0 0 12px 12px;
+    position: relative;
+}
+
+.form-input-area input {
+    width: 100%;
+    padding: 0.9rem;
+    background: #050508;
+    border: 1px solid #3a2a5a;
+    border-radius: 10px;
+    color: #c9b3ff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.form-input-area input:focus {
+    border-color: #9d6bff;
+    box-shadow: 0 0 10px rgba(157, 107, 255, 0.3);
+}
+
+.btn-continue {
+    width: 100%;
+    padding: 0.9rem;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #9d6bff, #7a4acc);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-continue:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(157, 107, 255, 0.4);
+}
+
+.btn-continue:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Terms Text */
+.terms-text {
+    font-size: 0.7rem;
+    color: #7a6a9a;
+    margin: 1rem 0;
+}
+
+.terms-text a {
+    color: #c9b3ff;
+    text-decoration: none;
+}
+
+.terms-text a:hover {
+    color: #e0b3ff;
+}
+
+/* Download Card */
+.download-card {
+    background: linear-gradient(135deg, #1a0a2a, #0f0f1a);
+    border-radius: 24px;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+    border: 1px solid rgba(157, 107, 255, 0.3);
+    transition: all 0.3s;
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px rgba(157, 107, 255, 0.2);
+    border-color: #9d6bff;
+}
+
+.download-icon {
+    font-size: 4rem;
+    color: #9d6bff;
+    margin-bottom: 1rem;
+}
+
+.download-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #c9b3ff;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(135deg, #9d6bff, #7a4acc);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(157, 107, 255, 0.5);
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.feature-item {
+    background: rgba(20, 20, 40, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(157, 107, 255, 0.15);
+    transition: all 0.3s;
+}
+
+.feature-item:hover {
+    background: rgba(30, 30, 55, 0.8);
+    border-color: rgba(157, 107, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+.feature-item h3 {
+    color: #c9b3ff;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    color: #8a7aaa;
+    font-size: 0.85rem;
+}
+
+/* Social Section - Purple Buttons Only */
+.social-section {
+    background: rgba(30, 30, 50, 0.6);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.social-title {
+    color: #c9b3ff;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.social-link.whatsapp-channel {
+    background: linear-gradient(135deg, #9d6bff, #7a4acc);
+}
+
+.social-link.whatsapp-number {
+    background: linear-gradient(135deg, #9d6bff, #7a4acc);
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+    box-shadow: 0 5px 15px rgba(157, 107, 255, 0.4);
+}
+
+/* Hidden Number - WhatsApp number direct නොපෙනේ */
+.hidden-number {
+    display: none;
+}
+
+/* Not Working */
+.not-working {
+    border-top: 1px solid rgba(157, 107, 255, 0.15);
+    padding: 1.5rem 0;
+    margin-top: 1rem;
+}
+
+.not-working h4 {
+    color: #c9b3ff;
+}
+
+.not-working p {
+    color: #8a7aaa;
+}
+
+/* Developer Section */
+.developer-section {
+    text-align: center;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    background: linear-gradient(135deg, #0a0a1a, #05050a);
+    border-radius: 20px;
+    border: 1px solid rgba(157, 107, 255, 0.3);
+}
+
+.developer-text {
+    font-size: 1rem;
+    color: #c9b3ff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.heart-animation {
+    display: inline-block;
+    animation: heartbeat 1.5s infinite;
+    color: #ff6b6b;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Footer */
+.footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(157, 107, 255, 0.15);
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #c9b3ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+    color: #e0b3ff;
+}
+
+hr {
+    width: 60px;
+    margin: 0.5rem auto;
+    border-color: #9d6bff;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(157, 107, 255, 0.15);
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #c9b3ff;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+    border: 1px solid rgba(157, 107, 255, 0.3);
+}
+
+.back-button:hover {
+    background: rgba(157, 107, 255, 0.3);
+    transform: translateX(-5px);
+}
+
+/* Download Main Card */
+.download-main-card {
+    background: linear-gradient(135deg, #1a0a2a, #0f0f1a);
+    border-radius: 32px;
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 1px solid rgba(157, 107, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+.download-icon-large {
+    font-size: 5rem;
+    color: #9d6bff;
+    margin-bottom: 1.5rem;
+}
+
+.download-main-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff, #c9b3ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.download-description {
+    color: #8a7aaa;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-btn-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #9d6bff, #7a4acc);
+    padding: 1rem 2.5rem;
+    border-radius: 60px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(157, 107, 255, 0.3);
+    cursor: pointer;
+    border: none;
+}
+
+.download-btn-large:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(157, 107, 255, 0.5);
+}
+
+.support-text {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #6a5a8a;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.info-card {
+    background: rgba(20, 20, 40, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(157, 107, 255, 0.15);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.info-card:hover {
+    background: rgba(30, 30, 55, 0.8);
+    border-color: rgba(157, 107, 255, 0.4);
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    font-size: 2.5rem;
+    color: #9d6bff;
+    margin-bottom: 1rem;
+}
+
+.info-card h3 {
+    margin-bottom: 0.5rem;
+    color: #c9b3ff;
+}
+
+.info-card p {
+    color: #8a7aaa;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* Version Info */
+.version-info {
+    background: rgba(157, 107, 255, 0.08);
+    border-radius: 16px;
+    padding: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+    border: 1px solid rgba(157, 107, 255, 0.2);
+}
+
+.version-badge {
+    display: inline-block;
+    background: #9d6bff;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Floating WhatsApp Button - Purple */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #9d6bff, #7a4acc);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(157, 107, 255, 0.4);
+    transition: all 0.3s;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #b580ff, #9d6bff);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 80px;
+    background: #9d6bff;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 1000;
+    border: none;
+}
+
+.back-to-top:hover {
+    background: #b580ff;
+    transform: translateY(-3px);
+}
+
+/* Share Button - Purple */
+.share-btn {
+    background: rgba(157, 107, 255, 0.2);
+    border: 1px solid #9d6bff;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    color: #c9b3ff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.share-btn:hover {
+    background: rgba(157, 107, 255, 0.4);
+    transform: scale(1.02);
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: #1a1a2a;
+    color: #c9b3ff;
+    padding: 12px 24px;
+    border-radius: 12px;
+    border-left: 4px solid #9d6bff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1001;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(157, 107, 255, 0.2);
+    border-top: 4px solid #9d6bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 1002;
+    display: none;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1001;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    .main-title, .download-main-title {
+        font-size: 1.8rem;
+    }
+    .feature-icons {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .download-main-card {
+        padding: 2rem 1rem;
+    }
+    .download-btn-large {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 15px;
+        right: 15px;
+    }
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        bottom: 15px;
+        left: 75px;
+    }
+    .theme-toggle-container {
+        left: 15px;
+        bottom: 15px;
+    }
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
